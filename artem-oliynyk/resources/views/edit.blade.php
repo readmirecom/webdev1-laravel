@@ -67,6 +67,11 @@
 <body>
 <div class="flex-center position-ref full-height">
     <div class="content">
+
+        @if(!empty($notifications))
+            <pre id="notifications">{{$notifications}}</pre>
+        @endif
+
         <h1>edit</h1>
 
         <form action="{{url("/edit/$model->id")}}" method="post">

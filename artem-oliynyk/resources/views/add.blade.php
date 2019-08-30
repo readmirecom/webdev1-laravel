@@ -68,6 +68,10 @@
 <div class="flex-center position-ref full-height">
     <div class="content">
 
+        @if(!empty($notifications))
+            <pre id="notifications">{{$notifications}}</pre>
+        @endif
+
         <h1>Add</h1>
         <form action="{{url('/add')}}" method="post">
             {{ csrf_field() }}
